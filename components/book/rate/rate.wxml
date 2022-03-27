@@ -1,0 +1,5 @@
+<!--components/book/rate/rate.wxml-->
+<view class="rate-box">
+  <text>{{ratetext}}</text>
+  <van-rate value="{{ pvalue }}" color="#f64c0d" size="{{25}}" data-type="{{valuetype}}" bind:change="onChange" />
+</view>

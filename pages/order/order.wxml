@@ -1,0 +1,32 @@
+<!--pages/order/order.wxml-->
+<view>
+  <van-tabs animated="{{true}}" swipeable title-active-color="#f64c0d" active="{{ active }}" bind:change="onChangeTab">
+    <van-tab title="全部" name="0">
+      <scroll-view scroll-y="{{true}}" bounces style="height: calc(100vh - 44px);padding: 0 10rpx;box-sizing: border-box;">
+        <orderitem></orderitem>
+        <orderitem></orderitem>
+        <orderitem></orderitem>
+        <orderitem></orderitem>
+        <orderitem></orderitem>
+        <orderitem></orderitem>
+        <orderitem></orderitem>
+        <orderitem></orderitem>
+      </scroll-view>
+    </van-tab>
+    <van-tab title="待发货" name="1">
+      <view style="height: calc(100vh - 44px);">
+        2
+      </view>
+    </van-tab>
+    <van-tab title="待收货" name="2">
+      <view style="height: calc(100vh - 44px);">
+        3
+      </view>
+    </van-tab>
+    <van-tab title="待评价" name="3">
+      <view style="height: calc(100vh - 44px);">
+        4
+      </view>
+    </van-tab>
+  </van-tabs>
+</view>

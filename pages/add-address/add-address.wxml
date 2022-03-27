@@ -1,0 +1,28 @@
+<!--pages/add-address/add-address.wxml-->
+<view class="add-address-box">
+  <view class="box-item">
+    <span class="item-title">收货人</span>
+    <input placeholder="请输入收货人" type="text" />
+  </view>
+  <view class="box-item">
+    <span class="item-title">电话号码</span>
+    <input placeholder="请输入电话号码" type="number" />
+  </view>
+  <view class="box-item">
+    <span class="item-title">所在地区</span>
+    <picker mode="region" bindchange="expandAreaChange" value="{{region}}" custom-item="{{customItem}}">
+      <input disabled placeholder="省/市/县、区" value="{{region[0]}} {{region[1]}} {{region[2]}}" type="text"/>
+    </picker>
+  </view>
+  <view class="box-item">
+    <span class="item-title">详细地址</span>
+    <textarea placeholder="填写详细地址" cols="30" rows="10"></textarea>
+  </view>
+  <view class="box-item">
+    <span class="item-title">设为默认</span>
+    <van-switch checked="{{ checked }}" bind:change="onChange" active-color="#f64c0d" inactive-color="#e7e7e7"/>
+  </view>
+  <view class="box-item">
+    <button bindtap="addAddress" class="add-button">确认</button>
+  </view>
+</view>

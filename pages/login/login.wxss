@@ -1,0 +1,72 @@
+/* pages/login/login.wxss */
+.login-box {
+  margin: 50rpx 20rpx 0 20rpx;
+  height: 100vh;
+}
+
+.login-img {
+  margin: 0 auto;
+  width: 200rpx;
+  height: 200rpx;
+  line-height: 200rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 50rpx;
+  text-align: center;
+  box-shadow: 0px 0px 5px;
+}
+
+.login-button,.register-button {
+  color: #fff;
+  width: 400rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  border-radius: 80rpx;
+  margin: 20rpx auto;
+}
+.login-button{
+  background-color: #f64;
+}
+.register-button{
+  background-color: rgb(221, 221, 221);
+  color: #4e4e4e;
+}
+/* 第三方登录 */
+
+.third-line{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 100rpx 0 50rpx 0;
+}
+.third-words{
+  color: #A9A9A9;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.single-line{
+  padding: 15rpx 20rpx;
+  width: 25%;
+  align-items: center;
+  height: 2rpx;
+}
+.line{
+  background-color: #A9A9A9;
+  width: 100%;
+  height: 2rpx;
+}
+.other-icon{
+  font-size: 60rpx;
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  color: #fff;
+  background: rgb(9, 236, 104);
+  line-height: 100rpx;
+  text-align: center;
+  margin: 20rpx auto;
+}

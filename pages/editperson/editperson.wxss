@@ -1,0 +1,12 @@
+/* pages/editperson/editperson.wxss */
+.edit-button{
+
+  color: #fff;
+  width: 400rpx;
+  line-height: 38px;
+  height: 80rpx;
+  border-radius: 80rpx;
+  border: 1rpx solid #f64;
+  margin: 100rpx auto;
+  background-color: #f64;
+}

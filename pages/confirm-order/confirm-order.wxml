@@ -1,0 +1,14 @@
+<!--pages/comfirm-order/conform-order.wxml-->
+<view class="conform-order-box">
+  <view class="address">
+  <addressItem addressitem="{{addressitem}}" isedit="{{false}}"></addressItem>
+  </view>
+  <view class="orderdetail">
+    <orderitem></orderitem>
+  </view>
+  <van-submit-bar
+  price="{{ 3050 }}"
+  button-text="提交订单"
+  bind:submit="onSubmit"
+/>
+</view>

@@ -1,0 +1,32 @@
+<!--pages/cart/cart.wxml-->
+<view class="allbackground">
+  <header islogo="{{islogo}}" title="购物车"></header>
+  <van-notify id="van-notify" />
+  <van-empty wx:if="{{list.length===0}}" description="空空如也" />
+  <scroll-view wx:else scroll-y="true" style="height: calc(100vh - 50px - {{navBarHeight}}px);" class="index-content">
+    <view class='shopcar_item' wx:for="{{list}}" wx:key="item">
+      <view class='shopcar_item_select'>
+        <van-checkbox value="{{ item.selected}}" checked-color="#f64c0d" bindtap='click' data-index='{{item.id}}'>
+        </van-checkbox>
+      </view>
+      <view class='product'>
+        <image src='{{item.image}}'></image>
+      </view>
+      <view class='product_intro'>
+        <view class='product_title'>{{item.title}}</view>
+        <view class='product_size'>规格：{{item.size}}</view>
+        <view class='product_add'>
+          <view class='product_num'>¥{{item.num}}</view>
+          <view class='goods_count'>
+            <text class="del" bindtap='minus' data-index='{{item.id}}'>-</text>
+            <input disabled value='{{item.value}}'></input>
+            <text class="add" bindtap='add' data-index='{{item.id}}'>+</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <van-submit-bar wx:if="{{islogin}}" class="settlement" price="{{allcomputer*100}}" button-text="去结算" bind:submit="onSubmit">
+    <van-checkbox value="{{all}}" checked-color="#f64c0d" bind:change="allshow">全选</van-checkbox>
+  </van-submit-bar>
+</view>

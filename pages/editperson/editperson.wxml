@@ -1,0 +1,16 @@
+<!--pages/editperson/editperson.wxml-->
+<view class="editperson-box">
+  <van-cell-group border="{{false}}">
+    <van-field size="large" required readonly="{{true}}" label="昵称" value="{{ userinfo.nickName }}" placeholder="请输入昵称" bind:change="onChangeNickname"/>
+    <van-field type="number" size="large" required clearable label="手机号" value="{{ userinfo.phone }}" placeholder="请输入手机号" bind:change="onChangePhone"/>
+    <van-field size="large" required clearable label="个性签名" value="{{ userinfo.sign }}" placeholder="（最多10个字）" maxlength="12" bind:change="onChangeSign"/>
+    <picker bindchange="bindSexChange" range="{{sexlist}}">
+      <van-field size="large" required clearable label="性别" value="{{ userinfo.sex }}" readonly />
+    </picker>
+    <picker mode="date" start="1900-01-01" bindchange="bindDateChange">
+      <van-field size="large" right-icon="calendar-o" required clearable label="出生日期" value="{{ userinfo.birth }}"
+        readonly />
+    </picker>
+  </van-cell-group>
+  <button class="edit-button" bindtap="saveData">保存</button>
+</view>

@@ -1,0 +1,21 @@
+<!--components/cart/cartItem/cart-item.wxml-->
+<view class='shopcar_item'>
+      <view class='shopcar_item_select'>
+        <van-checkbox value="{{ item.selected}}" checked-color="#f64c0d" bindtap='click' data-index='{{item.id}}'></van-checkbox>
+      </view>
+      <view class='product'>
+        <image src='{{item.image}}'></image>
+      </view>
+      <view class='product_intro'>
+        <view class='product_title'>{{item.title}}</view>
+        <view class='product_size'>规格：{{item.size}}</view>
+        <view class='product_add'>
+          <view class='product_num'>¥{{item.num}}</view>
+          <view class='goods_count'>
+            <text bindtap='minus' data-index='{{item.id}}'>-</text>
+            <input value='{{item.value}}'></input>
+            <text bindtap='add' data-index='{{item.id}}'>+</text>
+          </view>
+        </view>
+      </view>
+    </view>

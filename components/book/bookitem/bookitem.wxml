@@ -1,0 +1,8 @@
+<!--components/index/book-item.wxml-->
+<view class="bookitem-box" id="{{item.id}}" bindtap="handleToDetail">
+  <image class="itemImage" src="{{item.picUrl}}" mode="widthFix"></image>
+  <view class="item-detail">
+    <span class="title">这是标题这是标题这是标题这是标题</span>
+    <span class="price">￥5000</span>
+  </view>
+</view>

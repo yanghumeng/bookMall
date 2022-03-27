@@ -1,0 +1,57 @@
+<!--pages/index/index.wxml-->
+<view class="allbackground indexContrailer">
+  <view class="header-box">
+    <header></header>
+  </view>
+  <van-tabs nav-class="vanttabs" sticky title-active-color="#f64c0d" bind:click="onChange">
+    <van-tab title="首页"></van-tab>
+    <van-tab title="新品"></van-tab>
+    <van-tab title="销量"></van-tab>
+  </van-tabs>
+  <scroll-view scroll-y="true" style="height: calc(100vh - 50px - {{navBarHeight}}px);" class="index-content"
+    refresher-triggered="{{isTriggered}}" refresher-enabled="true" bindrefresherrefresh="onPullDownRefresh"
+    bindscrolltolower="onReachBottom" lower-threshold="20" scroll-with-animation="true">
+    <!-- 轮播图 -->
+    <swiper wx:if="{{index===0}}" class="banners" indicator-dots circular indicator-active-color="#f64c0d"
+      indicator-color="ivory" next-margin="40rpx" previous-margin="40rpx" autoplay>
+      <swiper-item wx:for="{{bannerList}}" wx:key="targetId" skip-hidden-item-layout="true">
+        <image class="banners-image" src="{{item.pic}}" lazy-load="true"></image>
+      </swiper-item>
+    </swiper>
+    <view class="menu" wx:if="{{index===0}}">
+      <view class="menu-item">
+        <view class="menu-icon new-arrival">
+          <van-icon name="new-arrival" />
+        </view>
+        <text>新品推荐</text>
+      </view>
+      <view class="menu-item">
+        <view class="menu-icon hot">
+          <van-icon name="hot" />
+        </view>
+        <text>限时活动</text>
+      </view>
+      <view class="menu-item">
+        <view class="menu-icon getdel">
+          <van-icon name="coupon" />
+        </view>
+        <text>领劵中心</text>
+      </view>
+    </view>
+    <!-- 新品 -->
+    <view class="list-content">
+      <view class="left-list">
+        <listitem item="{{item}}" wx:for="{{leftList}}" wx:key="id"></listitem>
+      </view>
+      <view class="right-list">
+        <listitem item="{{item}}" wx:for="{{rightList}}" wx:key="id"></listitem>
+      </view>
+    </view>
+    <!-- 上拉加载更多 -->
+    <view style="text-align:center;font-size:30rpx;height:100rpx">
+      <van-loading size="40rpx" wx:if="{{isload===1}}">加载中...</van-loading>
+      <span style="color:#aaaaaa;" wx:if="{{isload===0}}">上拉加载更多</span>
+      <span style="color:#aaaaaa;" wx:if="{{isload===2}}">------我是有底线的------</span>
+    </view>
+  </scroll-view>
+</view>

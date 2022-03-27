@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-loading": "@vant/weapp/loading/index",
+    "commentItem":"../../components/book/comment-item/comment-item"
+  }
+}

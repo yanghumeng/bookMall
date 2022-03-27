@@ -1,0 +1,9 @@
+<!--components/order/orderItem.wxml-->
+<view style="margin:10rpx 0;border-radius:20rpx;overflow: hidden;">
+  <van-card :num="{{bookdetail.num}}" price="10.00" desc="描述信息" title="商品标题" thumb="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=508387608,2848974022&fm=26&gp=0.jpg">
+  <view slot="footer" wx:if="{{bookdetail.status}}">
+    <van-button wx:if="{{bookdetail.status==1}}" plain round hairline size="mini" color="#f64c0d">确认收货</van-button>
+    <van-button wx:if="{{bookdetail.status==2}}" round plain hairline size="mini" color="#f64c0d" bind:click="handelToComment">去评价</van-button>
+  </view>
+</van-card>
+</view>

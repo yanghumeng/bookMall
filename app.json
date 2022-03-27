@@ -1,0 +1,65 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/editperson/editperson",
+    "pages/me/me",
+    "pages/login/login",
+    "pages/books/books",
+    "pages/classify/classify",
+    "pages/discount/discount",
+    "pages/detail/detail",
+    "pages/cart/cart",
+    "pages/search/search",
+    "pages/address/address",
+    "pages/add-address/add-address",
+    "pages/register/register",
+    "pages/setting/setting",
+    "pages/order/order",
+    "pages/collect/collect",
+    "pages/goods-comment/goods-comment",
+    "pages/confirm-order/confirm-order",
+    "pages/comments/comments"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#eeeeee",
+    "navigationBarTitleText": "BM图书商城",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#f64c0d",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/image/tabbaricon/index.png",
+        "selectedIconPath": "/static/image/tabbaricon/index_active.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "/static/image/tabbaricon/classify.png",
+        "selectedIconPath": "/static/image/tabbaricon/classify_active.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "/static/image/tabbaricon/cart.png",
+        "selectedIconPath": "/static/image/tabbaricon/cart_active.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/static/image/tabbaricon/person.png",
+        "selectedIconPath": "/static/image/tabbaricon/person_active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

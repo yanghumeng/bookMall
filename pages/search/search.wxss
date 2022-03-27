@@ -1,0 +1,51 @@
+/* pages/search/search.wxss */
+.search-box {
+  background: #fff;
+}
+
+/* 列表 */
+.list-content {
+  padding: 20rpx 10rpx;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* tab标签 */
+.tabs {
+  height: 44px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tab-item {
+  font-size: 34rpx;
+  color: #777777;
+  padding: 20rpx;
+}
+
+.tab-active-item {
+  color: #f64c0d;
+}
+
+.priceactive {
+  margin: 10rpx 20rpx;
+  color: #f64c0d;
+  text-align: center;
+  font-size: 36rpx;
+  border-radius: 14rpx;
+}
+
+/* 没有数据 */
+.datanull {
+  width: 100%;
+  height: 200rpx;
+  line-height: 200rpx;
+  text-align: center;
+  color: #a2a2a2
+}

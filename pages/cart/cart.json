@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "header": "../../components/common/header/header",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-checkbox": "@vant/weapp/checkbox/index"
+  },
+  "navigationStyle": "custom"
+}

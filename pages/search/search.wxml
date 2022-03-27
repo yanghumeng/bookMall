@@ -1,0 +1,37 @@
+<!--pages/search/search.wxml-->
+<view class="search-box">
+  <van-search shape="round" use-action-slot background="#f64c0d" value="{{ keyvalue }}" placeholder="请输入搜索关键词" show-action bind:change="changeKeyValue">
+    <view slot="action" style="color:#fff" bind:tap="onSearchByKey">搜索</view>
+  </van-search>
+  <view class="tabs" wx:if="{{booklist.length!=0}}">
+    <view class="tab-item {{0==index?'tab-active-item':''}}" data-id="0" bindtap="onChange">默认</view>
+    <view class="tab-item {{1==index?'tab-active-item':''}}" data-id="1" bindtap="onChange">销量</view>
+    <view class="tab-item {{2==index?'tab-active-item':''}}" data-id="2" bindtap="onChange">筛选</view>
+  </view>
+  <van-popup round closeable position="bottom" custom-style="height:80%;" show="{{ isBottomPopup }}"
+    bind:close="closePopup">
+    <view class="popup-box">
+      <span style="margin:20rpx 10rpx;color:#777;display: block;">价格</span>
+      <radio-group bindchange="radioChange">
+        <radio class="priceactive" value="pdown" color="#f64">价格降序</radio>
+        <radio class="priceactive" value="pup" color="#f64">价格升序</radio>
+      </radio-group>
+    </view>
+  </van-popup>
+  <scroll-view scroll-y="true" style="height: calc(100vh - 98px);" bindscrolltolower="onReachBottom"
+    lower-threshold="5">
+    <view>
+      <view wx:if="{{booklist.length===0}}" style="margin:0 auto;text-align:center">
+        <view class="datanull" style="">暂无数据</view>
+      </view>
+      <view class="list-content">
+          <bookitem style="width:48%" item="{{item}}" wx:for="{{booklist}}" wx:key="id"></bookitem>
+      </view>
+    </view>
+    <view style="text-align:center;font-size:30rpx;height:100rpx">
+      <van-loading size="40rpx" wx:if="{{isload===1}}">加载中...</van-loading>
+      <span style="color:#aaaaaa;" wx:if="{{isload===0}}">上拉加载更多</span>
+      <span style="color:#aaaaaa;" wx:if="{{isload===2}}">------我是有底线的------</span>
+    </view>
+  </scroll-view>
+</view>

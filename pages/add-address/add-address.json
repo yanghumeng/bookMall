@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-switch": "@vant/weapp/switch/index"
+  },
+  "navigationBarTitleText": "新增地址"
+}

@@ -1,0 +1,80 @@
+<!--pages/detail/detail.wxml-->
+<view class="">
+  <view class="detail-box">
+    <view class="detail-image">
+      <swiper indicator-dots="{{true}}" style="height:100%">
+        <block>
+          <swiper-item>
+            <image src="../../static/image/1.jpg" bindtap="preview" data-src="{{imgList[0]}}" mode="aspectFill"></image>
+          </swiper-item>
+        </block>
+        <block>
+          <swiper-item>
+            <image src="../../static/image/1.jpg" mode="aspectFill" bindtap="preview" data-src="{{imgList[1]}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="detail-content">
+      <view class="title">
+        <view class="price">￥3000</view>
+        <view class="comment-count">100评论</view>
+      </view>
+      <view class="title">
+        <view class="bookname">{{bookid}}</view>
+        <view class="share">
+          <button open-type="share" class="btn-share">
+            <van-icon name="share-o" />
+          </button>
+        </view>
+      </view>
+      <view class="cell">
+        <van-cell title="发货" value="四川省宜宾市翠屏区" />
+        <van-cell title="快递" value="免运费" />
+        <van-cell title="保障" value="假一赔十.极速退款.七天无理由退换" />
+        <van-cell title="参数" is-link bindtap="onshow" value="123456" />
+      </view>
+      <view class="comments-list" bindtap="handleToComments">
+        <view class="comment-list-title">评论</view>
+        <view class="comment-list-content">
+          <text>999+</text>
+          <van-icon name="arrow"/>
+        </view>
+      </view>
+
+      <van-popup show="{{ show }}" round position="bottom" custom-style="height: 80%" bind:close="onclose">
+        <view class="params-title">图书参数</view>
+        <view class="detail-item">
+          <span class="item-left">编号</span>
+          <span class="item-right">{{bookoption.number}}</span>
+        </view>
+        <view class="detail-item">
+          <span class="item-left">书名</span>
+          <span class="item-right">{{bookoption.name}}</span>
+        </view>
+        <view class="detail-item">
+          <span class="item-left">作者</span>
+          <span class="item-right">{{bookoption.author}}</span>
+        </view>
+        <view class="detail-item">
+          <span class="item-left">出版社</span>
+          <span class="item-right">{{bookoption.publish}}</span>
+        </view>
+        <view class="detail-close" bindtap="onclose">
+          关闭
+        </view>
+      </van-popup>
+      <view class="book-detail">
+        <view class="detail-title">商品详情</view>
+        <view class="detail-content"></view>
+      </view>
+    </view>
+  </view>
+  <van-goods-action>
+    <van-goods-action-icon icon="chat-o" text="客服" />
+    <!-- <van-goods-action-icon icon="cart-o" text="购物车" info="5" /> -->
+    <van-goods-action-icon icon="{{0?'star-o':'star'}}" text="{{0?'收藏':'已收藏'}}" />
+    <van-goods-action-button color="#ec9e2a" bind:click="addcart" text="加入购物车" type="warning" />
+    <van-goods-action-button color="#f64c0d" bind:click="buynow" text="购买" />
+  </van-goods-action>
+</view>

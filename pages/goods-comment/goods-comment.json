@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "orderitem":"../../components/me/order/booklist-item",
+    "rateitem":"../../components/book/rate/rate",
+    "van-field": "@vant/weapp/field/index"
+  }
+}

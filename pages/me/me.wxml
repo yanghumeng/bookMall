@@ -1,0 +1,66 @@
+<!--pages/me/me.wxml-->
+<view class="allbackground">
+  <header isSearch="{{isSearch}}"></header>
+  <scroll-view scroll-y="true" style="height: calc(100vh - {{navBarHeight}}px);">
+    <view class="content-person">
+      <view class="person">
+        <view class="person-photo">
+          <image wx:if="{{islogin}}" src="{{userinfo.picUrl?userinfo.picUrl:userinfo.avatarUrl}}" mode="aspectFit">
+          </image>
+          <image wx:else src="../../static/image/user.png" mode="aspectFit"></image>
+        </view>
+        <view class="person-name">
+          <text wx:if="{{!islogin}}" style="color:#a2a2a2;font-size:40rpx" bindtap="toLogin">登录/注册</text>
+          <view wx:else bindtap="toEditPerson" wx:else style="display:inline;font-size:40rpx;color:#a2a2a2;">
+            <text class="nickname">{{userinfo.nickName?userinfo.nickName:userinfo.phone}}</text>
+            <van-icon style="font-size:50rpx;" name="edit" />
+            <view style="color:#5d5d5d;font-size:30rpx">
+              签名：{{userinfo.sign}}
+            </view>
+          </view>
+        </view>
+      </view>
+      <van-grid square border="{{ false }}">
+        <van-grid-item bindtap="handleToOrder" data-type="0" icon="orders-o" text="全部订单" />
+        <van-grid-item bindtap="handleToOrder" data-type="2" icon="logistics" text="待收货" />
+        <van-grid-item bindtap="handleToOrder" data-type="3" icon="records" text="待评价" />
+        <van-grid-item bindtap="" icon="after-sale" text="退货/售后" />
+      </van-grid>
+    </view>
+    <view class="content-bottom">
+      <view class="wallet">
+        <van-icon name="gold-coin" size="30px"/>
+        <text style="margin-left:10rpx">钱包</text>
+      </view>
+      
+    </view>
+    <view class="content-bottom">
+      <van-cell-group inset>
+        <van-cell icon="location-o" size="large" is-link title="我的地址" bind:click="handleNavigateTo"
+          data-url="address" />
+        <van-cell icon="star-o" size="large" is-link title="我的收藏" bind:click="handleNavigateTo" data-url="collect" />
+        <van-cell icon="coupon-o" size="large" is-link title="我的优惠劵" bind:click="handleNavigateTo"
+          data-url="discount" />
+      </van-cell-group>
+    </view>
+    <view class="content-bottom">
+      <van-cell-group inset>
+        <van-cell icon="phone-o" size="large" is-link title="联系商家" bind:click="handleNavigateTo" data-url="connstore" />
+        <van-cell icon="envelop-o" size="large" is-link title="意见反馈" bind:click="onShowDialog" />
+        <van-cell icon="setting-o" size="large" is-link title="设置" bind:click="handleNavigateTo" data-url="setting" />
+      </van-cell-group>
+    </view>
+  </scroll-view>
+
+  <view class="openstore">我要开店</view>
+  <!-- 意见反馈 -->
+  <van-dialog use-slot title="反馈" show="{{ showDialog }}" show-confirm-button="{{false}}" confirmButtonText="发送"
+    show-cancel-button="{{false}}" bind:cancel="onCloseDialog">
+    <textarea class="idea" rows="10" bindinput="bindKeyInput" value="{{inputValue}}" placeholder="（最多50字）"
+      maxlength="50"></textarea>
+    <view class="dialogbutton">
+      <view bindtap="onCloseDialog" class="dialogback">取消</view>
+      <view bindtap="sendIdea" class="dialogsend">发送</view>
+    </view>
+  </van-dialog>
+</view>

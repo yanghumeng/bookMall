@@ -1,0 +1,40 @@
+<!--pages/booklist/booklist.wxml-->
+<view class="booklist-box">
+  <view class="tabs">
+    <view class="tab-item {{0==index?'tab-active-item':''}}" data-id="0" bindtap="onChange">默认</view>
+    <view class="tab-item {{1==index?'tab-active-item':''}}" data-id="1" bindtap="onChange">销量</view>
+    <view class="tab-item {{2==index?'tab-active-item':''}}" data-id="2" bindtap="onChange">筛选</view>
+  </view>
+  <van-popup round closeable position="bottom" custom-style="height:80%;" show="{{ isBottomPopup }}"
+    bind:close="onClose">
+    <view class="popup-box">
+      <span style="margin:20rpx 10rpx;color:#777;display: block;">价格</span>
+      <radio-group bindchange="radioChange">
+        <radio class="priceactive" value="pdown" color="#f64">价格降序</radio>
+        <radio class="priceactive" value="pup" color="#f64">价格升序</radio>
+      </radio-group>
+    </view>
+  </van-popup>
+  <scroll-view scroll-y="true" style="height: calc(100vh - 44px);" bindscrolltolower="onReachBottom"
+    lower-threshold="5">
+    <view>
+      <view wx:if="{{booklist.length===0}}" style="margin:0 auto;text-align:center">
+        <van-loading size="40rpx">加载中...</van-loading>
+      </view>
+      <view class="list-content">
+        <view class="left-list">
+          <listitem item="{{item}}" wx:for="{{leftList}}" wx:key="id"></listitem>
+        </view>
+        <view class="right-list">
+          <listitem item="{{item}}" wx:for="{{rightList}}" wx:key="id"></listitem>
+        </view>
+      </view>
+    </view>
+    <view style="text-align:center;font-size:30rpx;height:100rpx">
+      <van-loading size="40rpx" wx:if="{{isload===1}}">加载中...</van-loading>
+      <span style="color:#aaaaaa;" wx:if="{{isload===0}}">上拉加载更多</span>
+      <span style="color:#aaaaaa;" wx:if="{{isload===2}}">------我是有底线的------</span>
+    </view>
+  </scroll-view>
+
+</view>

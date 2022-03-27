@@ -1,0 +1,17 @@
+<!--components/me/addressItem/address.wxml-->
+<view class="address-content">
+  <view class="address-left">
+    <view class="title">
+      <span class="name">{{addressitem.name}}</span>
+      <span class="phone">{{addressitem.phone}}</span>
+      <view class="moren" wx:if="{{addressitem.isDefault}}">默</view>
+    </view>
+    <view class="address">
+      {{addressitem.addressDetail}}
+    </view>
+  </view>
+  <view class="address-right">
+      <van-icon wx:if="{{isedit}}" name="edit" data-id="{{addressitem.id}}" bindtap="editAddress"/>
+      <van-icon wx:else name="exchange" data-id="{{addressitem.id}}" bindtap="changeAddress"/>
+  </view>
+</view>

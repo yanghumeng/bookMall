@@ -1,0 +1,163 @@
+/* pages/detail/detail.wxss */
+.detail-box {
+  overflow-y: scroll;
+  height: calc(100vh - 50px);
+}
+
+.detail-box .detail-image {
+  height: 600rpx;
+  width: 100%;
+  overflow: hidden;
+}
+
+.detail-image image {
+  width: 100%;
+  height: 100%;
+}
+
+.detail-content {
+  padding: 20rpx;
+
+}
+
+.comments-list {
+  display: flex;
+  padding: 30rpx 20rpx;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
+.comments-list:active {
+  background-color: #eeeeee;
+}
+
+.comment-list-content {
+  text-align: right;
+  font-size: 40rpx;
+}
+
+.comment-list-title,
+.comment-list-content {
+  font-size: 34rpx;
+  font-weight: bold;
+  flex: 1;
+}
+
+.detail-content .cell .van-cell__title {
+  flex: 0.3;
+  color: #a2a2a2;
+}
+
+.detail-content .van-cell__value {
+  color: #000 !important;
+}
+
+.detail-content .van-cell__title,
+.van-cell__value {
+  text-align: left !important;
+}
+
+.detail-content .title {
+  display: flex;
+  padding: 10rpx;
+  height: 30px;
+  line-height: 30px;
+}
+
+.bookname {
+  flex: 1;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.share {
+  text-align: right;
+  border-radius: 50%;
+  background: #a2a2a2;
+}
+
+.detail-content .title .price {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #f64c0d;
+  flex: 1;
+}
+
+.detail-content .title .comment-count {
+  color: #a2a2a2;
+  font-size: 30rpx;
+  flex: 1;
+  text-align: right;
+}
+
+.params-title {
+  padding: 30rpx;
+  font-size: 40rpx;
+  text-align: center;
+  font-weight: bold;
+}
+
+.detail-item {
+  border-bottom: 1px solid #e9e9e9;
+  padding: 30rpx 20rpx;
+  margin: 0rpx 30rpx;
+  display: flex;
+}
+
+.detail-item .item-left {
+  width: 130rpx;
+  display: inline-block;
+  font-size: 30rpx;
+}
+
+.detail-item .item-right {
+  display: inline-block;
+  height: 100%;
+  padding-left: 50rpx;
+  font-size: 34rpx;
+  color: #a2a2a2;
+}
+
+/* 商品详情 */
+.book-detail {
+  padding: 20rpx;
+}
+
+.book-detail .detail-title {
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.book-detail .detail-content {
+  min-height: 200px;
+}
+
+.detail-close {
+  position: absolute;
+  bottom: 100rpx;
+  width: 200rpx;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  height: 70rpx;
+  font-size: 38rpx;
+  line-height: 70rpx;
+  border-radius: 70rpx;
+  background: #f64;
+  color: #fff;
+}
+
+.btn-share {
+  background: transparent;
+  padding: 36rpx;
+  height: 60rpx;
+  width: 60rpx;
+  margin: 0;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.btn-share::after {
+  border: 0px;
+}

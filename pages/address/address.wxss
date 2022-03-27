@@ -1,0 +1,29 @@
+/* pages/address/address.wxss */
+.address-box {
+  margin: 20rpx;
+}
+
+.add-button,
+.del-button {
+  height: 70rpx;
+  width: 200rpx;
+  text-align: center;
+  line-height: 70rpx;
+  border-radius: 70rpx;
+  background-color: rgba(227, 227, 227, 0.5);
+  color: #f64c0d;
+  font-size: 34rpx;
+  font-weight: bold;
+  position: absolute;
+  bottom: 50rpx;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.add-button {
+  right:100rpx;
+}
+
+.del-button {
+  left: 100rpx;
+}

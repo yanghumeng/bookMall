@@ -1,0 +1,14 @@
+/* pages/setting/setting.wxss */
+.loginout{
+  position: absolute;
+  bottom: 100rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #ffffff;
+  font-size: 30rpx;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 20rpx 30rpx;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 40rpx;
+}

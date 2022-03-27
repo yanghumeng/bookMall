@@ -1,0 +1,19 @@
+<!--pages/comments/comments.wxml-->
+<view class="comments">
+  <scroll-view scroll-y="true" style="height:100vh;" bindscrolltolower="onReachBottom" lower-threshold="5">
+    <view>
+      <view wx:if="{{commentslist.length===0}}" style="margin:0 auto;text-align:center">
+        <view class="datanull" style="">暂无数据</view>
+      </view>
+      <view class="list-content">
+        <commentItem wx:for="{{commentslist}}" wx:key="id"></commentItem>
+      </view>
+    </view>
+    <view style="text-align:center;font-size:30rpx;height:100rpx">
+      <van-loading size="40rpx" wx:if="{{isload===1}}">加载中...</van-loading>
+      <span style="color:#aaaaaa;" wx:if="{{isload===0}}">上拉加载更多</span>
+      <span style="color:#aaaaaa;" wx:if="{{isload===2}}">------我是有底线的------</span>
+    </view>
+  </scroll-view>
+
+</view>

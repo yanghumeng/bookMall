@@ -1,0 +1,13 @@
+<!--components/book/comment-item/comment-item.wxml-->
+<view class="comment-item-box">
+  <view class="item-content">
+    <view class="content-header">
+      <view class="header-photo">
+        <image src="../../../static/image/1.jpg" mode="aspectFill"></image>
+        <text>昵称</text>
+      </view>
+      <view class="header-date">2022-2-3</view>
+    </view>
+    <view class="content-text">下午二点一阵狂风，树叶都吹到九楼了，关窗都来不及</view>
+  </view>
+</view>

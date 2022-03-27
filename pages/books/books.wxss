@@ -1,0 +1,44 @@
+/* pages/booklist/booklist.wxss */
+.popup-box{
+  top: 100rpx;
+  position: absolute;
+  margin: 0 30rpx;
+}
+.priceactive{
+  margin: 10rpx 20rpx;
+  color: #f64c0d;
+  text-align: center;
+  font-size: 36rpx;
+  border-radius: 14rpx;
+}
+/* tab标签 */
+.tabs{
+  height: 44px;
+  display: flex;
+  justify-content: space-around;
+}
+.tab-item{
+  font-size: 34rpx;
+  color: #777777;
+  padding: 20rpx;
+}
+.tab-active-item{
+  color: #f64c0d;
+}
+/* 图书列表 */
+.list-content {
+  padding: 20rpx 10rpx;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.left-list,.right-list {
+  width: 50%;
+}
+.left-list{
+  float: left;
+}
+.right-list{
+  float: right;
+}

@@ -1,0 +1,109 @@
+/* pages/me/me.wxss */
+.content-person {
+  border-radius: 10rpx;
+  overflow: hidden;
+  margin: 0 10rpx;
+  margin-top: 20rpx;
+}
+
+.person {
+  background: #ffffff;
+  /* background-image: linear-gradient(to bottom right,#ffe7b2,#d6fbff); */
+  height: 200rpx;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.person-photo {
+  height: 160rpx;
+  width: 160rpx;
+  margin: 0 20rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 14rpx #5d5d5d;
+}
+
+.person-photo image {
+  height: 100%;
+  width: 100%;
+}
+
+.person-name {
+  flex: 1;
+  font-size: 34rpx;
+  line-height: 50rpx;
+  padding-left: 20rpx;
+}
+
+.content-bottom {
+  margin: 10rpx 0;
+}
+
+.openstore {
+  position: absolute;
+  bottom: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #f64c0d;
+  font-size: 30rpx;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 20rpx 30rpx;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 40rpx;
+}
+
+.idea {
+  padding: 30rpx;
+  box-sizing: border-box;
+  width: 90%;
+  border-top: 2rpx solid #777;
+  margin: 0 auto;
+}
+
+.dialogbutton {
+  display: flex;
+}
+
+.dialogback,
+.dialogsend {
+  flex: 1;
+  background: #e7e7e7;
+  height: 100rpx;
+  font-size: 40rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.dialogsend {
+  color: #f64c0d;
+}
+
+.nickname {
+  max-width: 300rpx;
+  height: 50rpx;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+  color: #000000;
+}
+
+.wallet{
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #f64;
+  padding: 20rpx;
+  width: 60%;
+  margin: 20rpx auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 10rpx;
+  background: #fff;
+  align-items: center;
+  box-shadow:0 0 3px #f64c0d;
+}

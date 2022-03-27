@@ -1,0 +1,49 @@
+/* components/index/header/header.wxss */
+
+.header {
+  height: 100rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-left {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  left: 10rpx;
+  position: absolute;
+  width: 100%;
+}
+
+.content-left .image {
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 50%;
+  background-color: #ffffff;
+  line-height: 40rpx;
+  margin: 0 0 0 20rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+
+.content-left .title {
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  height: 100%;
+  display: inline-block;
+}
+
+.content-center {
+  box-sizing: border-box;
+  position: absolute;
+  width:100%;
+  text-align: center;
+}
+
+.content-center .span {
+  font-size: 46rpx;
+  display: inline-block;
+  height: 100%;
+}

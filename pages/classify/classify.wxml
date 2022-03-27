@@ -1,0 +1,11 @@
+<!--pages/classify/classify.wxml-->
+<view class="allbackground">
+  <header islogo="{{islogo}}" title="分类"></header>
+  <!-- <van-empty description="空空如也" /> -->
+  <view style="height: calc(100vh - {{navBarHeight}}px);">
+    <van-cell-group inset>
+      <van-cell size="large" wx:for="{{classList}}" wx:key="index" is-link title="{{item.name}}" link-type="navigateTo" url="/pages/books/books?typeid={{item.typeId}}" />
+    </van-cell-group>
+  </view>
+
+</view>

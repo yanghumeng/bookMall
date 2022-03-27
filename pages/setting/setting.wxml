@@ -1,0 +1,6 @@
+<!--pages/setting/setting.wxml-->
+<view>
+  <van-cell icon="brush-o" size="large" is-link title="清除缓存" bind:click="clearLocalStorage" />
+  <van-cell icon="closed-eye" size="large" is-link title="修改密码" bind:click="editPassword" />
+  <view class="loginout">退出登录</view>
+</view>

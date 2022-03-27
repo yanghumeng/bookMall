@@ -1,0 +1,14 @@
+/* components/book/rate/rate.wxss */
+.rate-box {
+  padding: 10rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  display: flex;
+}
+
+.rate-box text {
+  font-size: 38rpx;
+  font-weight: bold;
+  color: #777777;
+  padding-right: 30rpx;
+}

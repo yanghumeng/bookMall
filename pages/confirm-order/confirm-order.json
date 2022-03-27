@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "addressItem": "../../components/me/addressItem/addressItem",
+    "orderitem":"../../components/me/order/booklist-item",
+    "van-submit-bar": "@vant/weapp/submit-bar/index"
+  }
+}

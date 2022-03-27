@@ -1,0 +1,12 @@
+<!--pages/address/address.wxml-->
+<view class="address-box">
+  <van-radio-group value="{{ radio }}" bind:change="onChange">
+    <van-radio icon-size="28px" name="{{item.id}}" checked-color="#f64c0d" label-disabled  wx:for="{{addressList}}" wx:key="id">
+      <addressItem addressitem="{{item}}"></addressItem>
+    </van-radio>
+  </van-radio-group>
+  <view>
+    <view bindtap="handleToAdd" class="del-button">删除</view>
+    <view bindtap="handleToAdd" class="add-button">新增+</view>
+  </view>
+</view>

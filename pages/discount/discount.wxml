@@ -1,0 +1,4 @@
+<!--pages/discount/discount.wxml-->
+<view class="discount-box allbackground">
+  <discountitem></discountitem>
+</view>

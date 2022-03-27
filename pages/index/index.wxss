@@ -1,0 +1,106 @@
+/* pages/index/index.wxss */
+.indexContrailer {
+  position: relative;
+  height: 100vh;
+  overflow: auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.index-content {
+  overflow-y: scroll;
+  padding-top: 6px;
+}
+
+.vanttabs {
+  background-color: #eeeeee;
+}
+
+/* 轮播图 */
+.banners {
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.banners image {
+  height: 100%;
+  width: 100%;
+  border-radius: 20rpx;
+}
+
+.banners-image {
+  border-radius: 20rpx;
+  transform: scale3d(0.97, 0.97, 0.97)
+}
+
+/* 菜单 */
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background:#fff;
+  padding: 10rpx 0;
+  border-radius: 10rpx;
+  margin: 20rpx 20rpx 0 20rpx;
+}
+
+.menu-item text {
+  font-size: 26rpx;
+}
+
+.menu-icon {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 50rpx;
+  color: #fff;
+  border-radius: 50%;
+}
+.new-arrival{
+  background-image: linear-gradient(to bottom right,#ffcd82,#ff2e00);
+}
+.getdel{
+  background-image: linear-gradient(to bottom right,#dafff6,#0090f0);
+}
+.hot{
+  background-image: linear-gradient(to bottom right,#f5d3ff,#8200ce);
+}
+
+/* 图书列表 */
+.list-content {
+  padding: 20rpx 10rpx;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.left-list,
+.right-list {
+  width: 50%;
+}
+
+.left-list {
+  float: left;
+}
+
+.right-list {
+  float: right;
+}
+
+/* 弹出框 */
+.popup-box {
+  top: 100rpx;
+  position: absolute;
+  margin: 0 30rpx;
+}
+
+.priceactive {
+  margin: 10rpx 20rpx;
+  color: #f64c0d;
+  text-align: center;
+  font-size: 36rpx;
+  border-radius: 14rpx;
+}

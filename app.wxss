@@ -1,0 +1,10 @@
+/**app.wxss**/
+.allbackground{
+  background-color: #eeeeee;
+  position: relative;
+  height: 100vh;
+  overflow: auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "header": "../../components/common/header/header",
+    "listitem": "../../components/book/bookitem/bookitem",
+    "van-loading": "@vant/weapp/loading/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-icon": "@vant/weapp/icon/index"
+  },
+  "navigationStyle": "custom"
+}

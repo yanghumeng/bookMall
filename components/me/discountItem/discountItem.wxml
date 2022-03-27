@@ -1,0 +1,12 @@
+<!--components/me/discountItem/discountItem.wxml-->
+<view class="sawtooth">
+  <view class="money-box">
+    <view class="money">
+      <span class="count">￥100</span>
+      <span class="limit">满200可用</span>
+    </view>
+    <view><span class="limitbook">限哲学类图书</span></view>
+    <view class="detail">有效期至 2022.02.10 23:59</view>
+  </view>
+  <view class="nowuse" bindtap="nowUse">立即使用</view>
+</view>

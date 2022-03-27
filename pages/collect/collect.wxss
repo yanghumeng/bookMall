@@ -1,0 +1,19 @@
+/* pages/collect/collect.wxss */
+
+/* 列表 */
+.list-content {
+  padding: 20rpx 10rpx;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+}
+
+/* 没有数据 */
+.datanull {
+  width: 100%;
+  height: 200rpx;
+  line-height: 200rpx;
+  text-align: center;
+  color: #a2a2a2
+}

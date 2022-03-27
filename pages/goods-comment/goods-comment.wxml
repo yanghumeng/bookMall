@@ -1,0 +1,16 @@
+<view class="goods-comment-box">
+  <scroll-view scroll-y="{{true}}">
+    <orderitem></orderitem>
+    <view class="comment-content">
+      <rateitem ratetext="描述相符" pvalue="{{msvalue}}" valuetype="{{0}}" bind:handlerate="getvalue"></rateitem>
+      <rateitem ratetext="物流服务" pvalue="{{wlvalue}}" valuetype="{{1}}" bind:handlerate="getvalue"></rateitem>
+      <!-- <textarea name="comment-text" class="comment-text" placeholder="评价该图书" maxlength="200"></textarea> -->
+      <view class="message-box">
+        <van-field model:value="{{ message }}" show-word-limit="{{true}}" type="textarea" placeholder="评价该图书"
+          maxlength="200" autosize="{{ {maxHeight: 100, minHeight: 50} }}" />
+      </view>
+      <button style="background:#f64;color:#fff;margin-top:20px">提交</button>
+    </view>
+
+  </scroll-view>
+</view>

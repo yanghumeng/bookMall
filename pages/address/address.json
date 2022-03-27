@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "addressItem": "../../components/me/addressItem/addressItem",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index"
+  },
+  "navigationBarTitleText": "我的地址管理"
+}

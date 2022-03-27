@@ -1,0 +1,12 @@
+<!--components/index/header/header.wxml-->
+<view class="header" style="height:{{navBarHeight}}px">
+  <view class="content-left" style="height:{{menuHeight}}px;line-height:{{menuHeight}}px;bottom:{{menuBotton}}px;">
+    <!-- <slot name="logo"></slot> -->
+    <image wx:if="{{islogo}}" class="image" src="../../../static/image/tabbaricon/cart_active.png"></image>
+    <!-- <slot name="title"></slot> -->
+    <span class="title">{{title}}</span>
+    <view class="content-center" style="" wx:if="{{isSearch}}">
+      <span class="span" bindtap="toSearch"><van-icon name="search" /></span>
+    </view>
+  </view>
+</view>
